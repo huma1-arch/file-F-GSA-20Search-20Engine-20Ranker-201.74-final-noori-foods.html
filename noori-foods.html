@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noori Foods — Pakistani BBQ & Fine Dining | Rawalpindi</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#D4AF37;--gl:#F4D03F;--gd:#B8860B;--bk:#080808;--dk:#111;--d2:#161616;--d3:#1e1e1e;--rd:#C0392B;--r2:#E74C3C;--wh:#F5F0E8;--mt:#777;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:var(--bk);color:var(--wh);font-family:'Raleway',sans-serif;overflow-x:hidden;cursor:none;}
+::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:var(--dk);}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px;}
+#C{position:fixed;width:10px;height:10px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);}
+#CR{position:fixed;width:32px;height:32px;border:1px solid rgba(212,175,55,.5);border-radius:50%;pointer-events:none;z-index:99998;transform:translate(-50%,-50%);}
+nav{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:14px 5%;display:flex;align-items:center;justify-content:space-between;transition:all .4s;}
+nav.sc{background:rgba(8,8,8,.96);backdrop-filter:blur(20px);border-bottom:1px solid rgba(212,175,55,.2);}
+.nl{font-family:'Cinzel Decorative',serif;font-size:1.5rem;color:var(--gold);letter-spacing:2px;}.nl span{color:var(--r2);}
+.nm{display:flex;gap:26px;list-style:none;}.nm a{color:rgba(245,240,232,.65);text-decoration:none;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;font-weight:600;transition:color .3s;}.nm a:hover{color:var(--gold);}
+.nob{background:linear-gradient(135deg,var(--gold),var(--gd));color:var(--bk);padding:9px 22px;border:none;font-family:'Raleway',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);transition:all .3s;}
+.nob:hover{transform:scale(1.05);box-shadow:0 4px 20px rgba(212,175,55,.4);}
+/* HERO */
+#hero{height:100vh;position:relative;overflow:hidden;display:flex;align-items:center;}
+.hbg{position:absolute;inset:0;}.hbg img{width:100%;height:100%;object-fit:cover;opacity:.28;filter:saturate(1.2);}
+.hov{position:absolute;inset:0;background:linear-gradient(120deg,rgba(8,8,8,.94) 0%,rgba(8,8,8,.65) 55%,rgba(8,8,8,.82) 100%);}
+.hglow{position:absolute;inset:0;background:radial-gradient(ellipse at 65% 50%,rgba(212,175,55,.07),transparent 55%),radial-gradient(ellipse at 15% 85%,rgba(192,57,43,.1),transparent 50%);}
+#ptc{position:absolute;inset:0;overflow:hidden;}
+.pt{position:absolute;width:2px;height:2px;background:var(--gold);border-radius:50%;animation:ptup linear infinite;opacity:0;}
+@keyframes ptup{0%{transform:translateY(100vh);opacity:0;}10%{opacity:.6;}90%{opacity:.15;}100%{transform:translateY(-5vh);opacity:0;}}
+.hcon{position:relative;z-index:10;padding:0 6%;max-width:660px;}
+.htag{font-size:.62rem;letter-spacing:6px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:flex;align-items:center;gap:10px;opacity:0;animation:fup .8s .3s forwards;}
+.htag::before{content:'';width:28px;height:1px;background:var(--gold);}
+h1.htl{font-family:'Cinzel Decorative',serif;font-size:clamp(2.3rem,5.5vw,4.8rem);font-weight:900;line-height:1.05;margin-bottom:16px;opacity:0;animation:fup .8s .5s forwards;}
+.t1{display:block;color:var(--wh);}.t2{display:block;background:linear-gradient(135deg,var(--gl),var(--gold),var(--gd));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hsub{font-size:.85rem;color:var(--mt);letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;opacity:0;animation:fup .8s .65s forwards;}
+.hrat{display:flex;align-items:center;gap:8px;margin-bottom:34px;opacity:0;animation:fup .8s .75s forwards;}
+.stars{color:var(--gold);font-size:1rem;letter-spacing:1px;}.rtxt{font-size:.75rem;color:var(--mt);}
+.hbtns{display:flex;gap:12px;opacity:0;animation:fup .8s .9s forwards;}
+.bp{background:linear-gradient(135deg,var(--gold),var(--gd));color:var(--bk);padding:14px 36px;border:none;font-family:'Raleway',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:3px;text-transform:uppercase;cursor:pointer;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);transition:all .3s;}
+.bp:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(212,175,55,.45);}
+.bs{background:transparent;color:var(--wh);padding:14px 36px;border:1px solid rgba(245,240,232,.18);font-family:'Raleway',sans-serif;font-weight:600;font-size:.78rem;letter-spacing:3px;text-transform:uppercase;cursor:pointer;transition:all .3s;}
+.bs:hover{border-color:rgba(212,175,55,.5);color:var(--gold);transform:translateY(-3px);}
+/* hero right visuals */
+.hvis{position:absolute;right:5%;top:50%;transform:translateY(-50%);width:40%;height:75vh;display:flex;align-items:center;justify-content:center;pointer-events:none;}
+.hvm{width:340px;height:340px;border-radius:50%;overflow:hidden;border:2px solid rgba(212,175,55,.28);box-shadow:0 0 70px rgba(212,175,55,.12),0 40px 80px rgba(0,0,0,.7);animation:hfl 5s ease-in-out infinite;position:relative;z-index:2;}
+.hvm img{width:100%;height:100%;object-fit:cover;}
+.hvr1{position:absolute;width:400px;height:400px;border-radius:50%;border:1px solid rgba(212,175,55,.12);animation:rr 18s linear infinite;}
+.hvr2{position:absolute;width:480px;height:480px;border-radius:50%;border:1px dashed rgba(212,175,55,.06);animation:rr 13s linear infinite reverse;}
+.hvdot{position:absolute;width:7px;height:7px;background:var(--gold);border-radius:50%;box-shadow:0 0 10px var(--gold);}
+.d1{top:8px;left:50%;transform:translateX(-50%);}.d2{bottom:8px;left:50%;transform:translateX(-50%);}
+.hvm2{position:absolute;width:90px;height:90px;border-radius:50%;overflow:hidden;border:2px solid rgba(212,175,55,.2);box-shadow:0 8px 24px rgba(0,0,0,.5);}
+.hvm2 img{width:100%;height:100%;object-fit:cover;}
+.m1{top:5px;right:35px;animation:hfl 4s .5s ease-in-out infinite;}
+.m2{bottom:25px;right:5px;animation:hfl 4.5s 1s ease-in-out infinite;}
+.m3{top:45px;left:-15px;animation:hfl 5s 1.5s ease-in-out infinite;}
+@keyframes hfl{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
+@keyframes rr{0%{transform:rotate(0);}100%{transform:rotate(360deg);}}
+@keyframes fup{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:translateY(0);}}
+.hscr{position:absolute;bottom:26px;left:6%;display:flex;align-items:center;gap:10px;opacity:0;animation:fup .8s 1.2s forwards;}
+.scrl{width:1px;height:42px;background:linear-gradient(to bottom,var(--gold),transparent);}
+.scrt{font-size:.58rem;letter-spacing:3px;color:var(--mt);text-transform:uppercase;}
+/* STATS */
+.sstrip{background:linear-gradient(135deg,rgba(212,175,55,.07),rgba(0,0,0,.4));border-top:1px solid rgba(212,175,55,.13);border-bottom:1px solid rgba(212,175,55,.13);padding:30px 6%;display:flex;justify-content:space-around;flex-wrap:wrap;gap:20px;}
+.ssi{text-align:center;}.ssn{font-family:'Cinzel Decorative',serif;font-size:1.9rem;color:var(--gold);display:block;}.ssl{font-size:.62rem;letter-spacing:3px;color:var(--mt);text-transform:uppercase;margin-top:3px;}
+/* SECTIONS */
+section{padding:86px 6%;}
+.sl{font-size:.6rem;letter-spacing:6px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.st{font-family:'Cinzel Decorative',serif;font-size:clamp(1.5rem,2.8vw,2.6rem);font-weight:700;margin-bottom:12px;}
+.st span{background:linear-gradient(135deg,var(--gl),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.sd{width:48px;height:2px;background:linear-gradient(to right,var(--gold),transparent);margin-bottom:44px;}
+.gl{height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);opacity:.18;}
+/* ABOUT */
+#about{background:linear-gradient(180deg,var(--bk),var(--d2));}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.ap{font-size:.86rem;color:var(--mt);line-height:1.9;margin-bottom:14px;}
+.astat{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px;}
+.asc{background:rgba(212,175,55,.05);border:1px solid rgba(212,175,55,.14);padding:18px;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));transition:all .3s;}
+.asc:hover{border-color:rgba(212,175,55,.38);background:rgba(212,175,55,.09);}
+.asn{font-family:'Cinzel Decorative',serif;font-size:1.9rem;color:var(--gold);}
+.asl{font-size:.62rem;letter-spacing:2px;color:var(--mt);text-transform:uppercase;margin-top:3px;}
+.aviz{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:10px;height:420px;}
+.avi{border-radius:3px;overflow:hidden;position:relative;border:1px solid rgba(212,175,55,.15);}
+.avi img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.avi:hover img{transform:scale(1.07);}
+.avi::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(0,0,0,.5));pointer-events:none;}
+.avi:first-child{grid-row:span 2;}
+.avil{position:absolute;bottom:9px;left:11px;font-size:.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);z-index:2;}
+/* MENU */
+#menu{background:var(--dk);}
+.mtabs{display:flex;gap:3px;margin-bottom:38px;flex-wrap:wrap;}
+.mt{padding:9px 18px;background:rgba(255,255,255,.03);border:1px solid rgba(212,175,55,.1);color:var(--mt);font-family:'Raleway',sans-serif;font-size:.68rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .3s;}
+.mt:hover,.mt.active{background:rgba(212,175,55,.1);border-color:var(--gold);color:var(--gold);}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:18px;}
+/* MENU CARD */
+.mc{background:var(--d2);border:1px solid rgba(212,175,55,.1);overflow:hidden;transition:all .4s;cursor:pointer;}
+.mc:hover{border-color:rgba(212,175,55,.32);transform:translateY(-6px);box-shadow:0 18px 45px rgba(0,0,0,.65);}
+.mci{height:172px;overflow:hidden;position:relative;background:#181818;}
+.mci img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.mc:hover .mci img{transform:scale(1.08);}
+.mcio{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(0,0,0,.45));}
+.mcb{position:absolute;top:9px;left:9px;font-size:.58rem;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;font-weight:700;}
+.mcb.popular{background:var(--gold);color:var(--bk);}
+.mcb.spicy{background:var(--rd);color:#fff;}
+.mcb.new{background:#1a6b3c;color:#fff;}
+.mcb.special{background:#5b3fa6;color:#fff;}
+.mczoom{position:absolute;bottom:9px;right:9px;width:28px;height:28px;background:rgba(0,0,0,.6);border:1px solid rgba(212,175,55,.3);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:.8rem;cursor:pointer;transition:all .3s;opacity:0;}
+.mc:hover .mczoom{opacity:1;}
+.mcbody{padding:14px;}
+.mcrat{display:flex;align-items:center;gap:4px;margin-bottom:8px;}
+.mcs{color:var(--gold);font-size:.66rem;letter-spacing:1px;}.mcrc{font-size:.62rem;color:var(--mt);}
+.mcn{font-family:'Playfair Display',serif;font-size:.96rem;font-weight:700;margin-bottom:5px;color:var(--wh);}
+.mcd{font-size:.73rem;color:var(--mt);line-height:1.6;margin-bottom:12px;}
+.mcf{display:flex;justify-content:space-between;align-items:center;}
+.mcp{font-family:'Cinzel Decorative',serif;font-size:.96rem;color:var(--gold);}
+.mcp small{font-size:.58rem;color:var(--mt);font-family:'Raleway',sans-serif;}
+.adb{width:30px;height:30px;background:linear-gradient(135deg,var(--gold),var(--gd));border:none;color:var(--bk);font-size:1.05rem;font-weight:700;cursor:pointer;clip-path:polygon(5px 0%,100% 0%,calc(100% - 5px) 100%,0% 100%);display:flex;align-items:center;justify-content:center;transition:all .3s;flex-shrink:0;}
+.adb:hover{transform:scale(1.12);box-shadow:0 4px 14px rgba(212,175,55,.45);}
+/* SPECIALS */
+#specials{background:linear-gradient(180deg,var(--dk),var(--bk));}
+.sgrid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:auto auto;gap:14px;}
+.scc{position:relative;overflow:hidden;cursor:pointer;border:1px solid rgba(212,175,55,.13);transition:all .4s;}
+.scc img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.scc:hover img{transform:scale(1.06);}
+.scc::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(0,0,0,.25) 65%,transparent 100%);pointer-events:none;}
+.scc:hover{border-color:rgba(212,175,55,.38);box-shadow:0 18px 40px rgba(0,0,0,.6);}
+.scc:first-child{grid-row:span 2;height:380px;}
+.scc:not(:first-child){height:183px;}
+.sci{position:absolute;bottom:0;left:0;right:0;padding:14px;z-index:2;}
+.scn{font-family:'Playfair Display',serif;font-size:.96rem;font-weight:700;margin-bottom:3px;}
+.scc:first-child .scn{font-size:1.25rem;}
+.scp{color:var(--gold);font-family:'Cinzel Decorative',serif;font-size:.88rem;}
+.scax{display:inline-flex;align-items:center;gap:5px;background:rgba(212,175,55,.12);border:1px solid rgba(212,175,55,.28);color:var(--gold);padding:4px 11px;font-size:.62rem;letter-spacing:2px;text-transform:uppercase;margin-top:7px;cursor:pointer;transition:all .3s;}
+.scax:hover{background:rgba(212,175,55,.28);}
+.scst{position:absolute;top:10px;right:10px;background:var(--rd);color:#fff;font-size:.58rem;letter-spacing:2px;text-transform:uppercase;padding:3px 9px;z-index:3;}
+/* RAMADAN */
+#ramadan{background:radial-gradient(ellipse at 50% 0%,rgba(8,15,8,1),rgba(4,7,4,1));border-top:1px solid rgba(212,175,55,.18);border-bottom:1px solid rgba(212,175,55,.18);position:relative;overflow:hidden;}
+.rh{text-align:center;margin-bottom:46px;}
+.mi{font-size:2.8rem;display:block;margin-bottom:12px;animation:mg 3s ease-in-out infinite;}
+@keyframes mg{0%,100%{filter:drop-shadow(0 0 8px gold);}50%{filter:drop-shadow(0 0 22px gold);}}
+.rcards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:36px;}
+.rcard{background:linear-gradient(135deg,rgba(212,175,55,.06),rgba(0,0,0,.55));border:1px solid rgba(212,175,55,.18);overflow:hidden;transition:all .4s;clip-path:polygon(0 0,calc(100% - 13px) 0,100% 13px,100% 100%,13px 100%,0 calc(100% - 13px));}
+.rcard:hover{border-color:rgba(212,175,55,.42);transform:translateY(-5px);box-shadow:0 18px 38px rgba(0,0,0,.5);}
+.rcimg{height:132px;overflow:hidden;}.rcimg img{width:100%;height:100%;object-fit:cover;}
+.rcb{padding:20px;}
+.rct{font-size:.6rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.rcn{font-family:'Cinzel Decorative',serif;font-size:.96rem;margin-bottom:12px;}
+.rlist{list-style:none;margin-bottom:14px;}
+.rlist li{font-size:.74rem;color:var(--mt);padding:3px 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;justify-content:space-between;}
+.rlist li span{color:var(--wh);}
+.rpr{font-family:'Cinzel Decorative',serif;font-size:1.6rem;color:var(--gold);}
+.rprl{font-size:.62rem;color:var(--mt);}
+.radd{width:100%;margin-top:12px;padding:9px;background:linear-gradient(135deg,var(--gold),var(--gd));border:none;color:var(--bk);font-family:'Raleway',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;clip-path:polygon(7px 0%,100% 0%,calc(100% - 7px) 100%,0% 100%);transition:all .3s;}
+.radd:hover{box-shadow:0 4px 18px rgba(212,175,55,.4);transform:translateY(-2px);}
+.bwrap{background:linear-gradient(135deg,rgba(212,175,55,.07),rgba(0,0,0,.65));border:1px solid rgba(212,175,55,.28);padding:36px;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;clip-path:polygon(0 0,calc(100% - 18px) 0,100% 18px,100% 100%,18px 100%,0 calc(100% - 18px));}
+.bimg{height:220px;border-radius:2px;overflow:hidden;border:1px solid rgba(212,175,55,.18);}.bimg img{width:100%;height:100%;object-fit:cover;}
+.bprc{font-family:'Cinzel Decorative',serif;font-size:2.8rem;color:var(--gold);display:block;margin-bottom:6px;}
+.btags{display:flex;flex-wrap:wrap;gap:5px;margin:14px 0 20px;}
+.btag{font-size:.62rem;padding:3px 9px;border:1px solid rgba(212,175,55,.18);color:var(--gold);letter-spacing:1px;}
+/* ORDER */
+#order{background:var(--d2);}
+.olay{display:grid;grid-template-columns:1fr 350px;gap:28px;align-items:start;}
+.opan{background:rgba(0,0,0,.32);border:1px solid rgba(212,175,55,.16);padding:26px;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px));}
+.opt{font-family:'Cinzel Decorative',serif;font-size:1.1rem;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:7px;}
+.citems{display:flex;flex-direction:column;gap:9px;max-height:370px;overflow-y:auto;padding-right:5px;}
+.citems::-webkit-scrollbar{width:3px;}.citems::-webkit-scrollbar-thumb{background:rgba(212,175,55,.28);}
+.citem{display:flex;align-items:center;gap:9px;padding:11px;background:rgba(255,255,255,.03);border:1px solid rgba(212,175,55,.07);transition:border-color .3s;}
+.citem:hover{border-color:rgba(212,175,55,.22);}
+.cii{width:46px;height:46px;border-radius:2px;overflow:hidden;flex-shrink:0;background:#222;}.cii img{width:100%;height:100%;object-fit:cover;}
+.cin{flex:1;min-width:0;}.cin-n{font-size:.8rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}.cin-p{font-size:.7rem;color:var(--gold);margin-top:1px;}
+.cqty{display:flex;align-items:center;gap:5px;}
+.qb{width:20px;height:20px;background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.22);color:var(--gold);cursor:pointer;font-size:.82rem;transition:all .2s;}.qb:hover{background:rgba(212,175,55,.26);}
+.qn{font-size:.8rem;min-width:16px;text-align:center;}
+.crm{background:none;border:none;color:var(--mt);cursor:pointer;font-size:.88rem;transition:color .2s;padding:3px;}.crm:hover{color:var(--r2);}
+.cempty{text-align:center;padding:32px;color:var(--mt);font-size:.8rem;}.ceico{font-size:2.2rem;display:block;margin-bottom:9px;}
+.osum{margin-top:18px;border-top:1px solid rgba(212,175,55,.11);padding-top:16px;}
+.osr{display:flex;justify-content:space-between;margin-bottom:7px;font-size:.8rem;color:var(--mt);}
+.osr.tot{font-size:.92rem;color:var(--wh);font-weight:700;border-top:1px solid rgba(212,175,55,.16);padding-top:9px;margin-top:3px;}
+.osr.tot .tp{color:var(--gold);font-family:'Cinzel Decorative',serif;}
+.cpan{background:rgba(0,0,0,.32);border:1px solid rgba(212,175,55,.16);padding:26px;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px));}
+.fl{display:block;font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.fg{margin-bottom:16px;}
+.fi,.fsel,.fta{width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(212,175,55,.14);color:var(--wh);padding:10px 13px;font-family:'Raleway',sans-serif;font-size:.8rem;outline:none;transition:border-color .3s;clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,7px 100%,0 calc(100% - 7px));}
+.fi:focus,.fsel:focus,.fta:focus{border-color:var(--gold);background:rgba(212,175,55,.05);}
+.fsel option{background:var(--dk);}
+.fta{height:72px;resize:none;}
+.rg{display:flex;gap:9px;}.ro{flex:1;}.ro input{display:none;}
+.rl{display:block;padding:8px;text-align:center;font-size:.68rem;letter-spacing:1px;text-transform:uppercase;border:1px solid rgba(212,175,55,.16);cursor:pointer;color:var(--mt);transition:all .3s;}
+.ro input:checked+.rl{border-color:var(--gold);color:var(--gold);background:rgba(212,175,55,.09);}
+.pob{width:100%;padding:15px;background:linear-gradient(135deg,var(--gold),var(--gd));border:none;color:var(--bk);font-family:'Raleway',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:3px;text-transform:uppercase;cursor:pointer;clip-path:polygon(9px 0%,100% 0%,calc(100% - 9px) 100%,0% 100%);transition:all .3s;margin-top:5px;}
+.pob:hover{box-shadow:0 8px 26px rgba(212,175,55,.5);transform:translateY(-2px);}
+/* REVIEWS */
+#reviews{background:var(--bk);}
+.revg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.revc{background:rgba(255,255,255,.025);border:1px solid rgba(212,175,55,.09);padding:22px;transition:all .32s;clip-path:polygon(0 0,calc(100% - 11px) 0,100% 11px,100% 100%,11px 100%,0 calc(100% - 11px));}
+.revc:hover{border-color:rgba(212,175,55,.28);transform:translateY(-4px);}
+.revs{color:var(--gold);font-size:.88rem;letter-spacing:2px;margin-bottom:10px;}
+.revt{font-size:.8rem;color:var(--mt);line-height:1.8;margin-bottom:14px;font-style:italic;}
+.reva{display:flex;align-items:center;gap:9px;}
+.revav{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gd));display:flex;align-items:center;justify-content:center;font-family:'Cinzel Decorative',serif;font-size:.88rem;color:var(--bk);font-weight:700;}
+.revn{font-size:.8rem;font-weight:600;}.revl{font-size:.65rem;color:var(--mt);}
+/* CONTACT */
+#contact{background:linear-gradient(180deg,var(--dk),var(--bk));}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:46px;}
+.ccard{display:flex;gap:13px;align-items:flex-start;padding:16px;background:rgba(255,255,255,.02);border:1px solid rgba(212,175,55,.09);clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px));transition:all .3s;margin-bottom:12px;}
+.ccard:hover{border-color:rgba(212,175,55,.26);}
+.cico{font-size:1.3rem;flex-shrink:0;}
+.cct{font-size:.64rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:3px;}
+.cci{font-size:.82rem;line-height:1.6;}
+.hrw{margin-top:26px;background:rgba(212,175,55,.04);border:1px solid rgba(212,175,55,.11);padding:22px;clip-path:polygon(0 0,calc(100% - 11px) 0,100% 11px,100% 100%,11px 100%,0 calc(100% - 11px));}
+.hrt{font-size:.64rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+.hrr{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:.78rem;color:var(--mt);}
+.hrr .op{color:#2ecc71;}
+.ctgb{background:rgba(212,175,55,.04);border:1px solid rgba(212,175,55,.18);padding:22px;clip-path:polygon(0 0,calc(100% - 11px) 0,100% 11px,100% 100%,11px 100%,0 calc(100% - 11px));margin-top:26px;}
+.ctgt{font-family:'Cinzel Decorative',serif;font-size:.9rem;color:var(--gold);margin-bottom:9px;}
+.ctgp{font-size:.78rem;color:var(--mt);line-height:1.7;margin-bottom:12px;}
+.ctgtags{display:flex;flex-wrap:wrap;gap:5px;}
+.ctgtag{font-size:.62rem;padding:3px 8px;border:1px solid rgba(212,175,55,.2);color:var(--gold);}
+footer{background:var(--dk);padding:32px 6%;border-top:1px solid rgba(212,175,55,.13);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;}
+.flog{font-family:'Cinzel Decorative',serif;font-size:1.25rem;color:var(--gold);}
+.fcp{font-size:.68rem;color:var(--mt);text-align:center;}
+.fsoc{display:flex;gap:9px;}
+.sb{width:32px;height:32px;border:1px solid rgba(212,175,55,.22);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:.8rem;cursor:pointer;transition:all .3s;}
+.sb:hover{background:rgba(212,175,55,.14);border-color:var(--gold);}
+/* TOAST */
+.toast{position:fixed;bottom:26px;right:26px;z-index:10000;background:var(--d3);border:1px solid rgba(212,175,55,.38);padding:13px 18px;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px));display:flex;align-items:center;gap:11px;min-width:250px;transform:translateX(160%);transition:transform .4s cubic-bezier(.175,.885,.32,1.275);}
+.toast.show{transform:translateX(0);}
+.tim{width:42px;height:42px;border-radius:2px;overflow:hidden;flex-shrink:0;}.tim img{width:100%;height:100%;object-fit:cover;}
+.tmg{font-size:.8rem;}.tpr{font-size:.73rem;color:var(--gold);margin-top:2px;}
+.cf{position:fixed;bottom:26px;left:26px;z-index:5000;background:linear-gradient(135deg,var(--gold),var(--gd));width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 18px rgba(212,175,55,.4);transition:all .3s;font-size:1.25rem;}
+.cf:hover{transform:scale(1.1);box-shadow:0 8px 28px rgba(212,175,55,.6);}
+.cfc{position:absolute;top:-5px;right:-5px;background:var(--rd);color:#fff;width:20px;height:20px;border-radius:50%;font-size:.62rem;font-weight:700;display:none;align-items:center;justify-content:center;}
+.cfc.v{display:flex;}
+.movl{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:20000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s;}
+.movl.open{opacity:1;pointer-events:all;}
+.modal{background:var(--d2);border:1px solid rgba(212,175,55,.32);padding:42px 34px;text-align:center;max-width:450px;width:90%;clip-path:polygon(0 0,calc(100% - 18px) 0,100% 18px,100% 100%,18px 100%,0 calc(100% - 18px));transform:scale(.82);transition:transform .4s;}
+.movl.open .modal{transform:scale(1);}
+.mico{font-size:3.2rem;margin-bottom:12px;display:block;}
+.mtit{font-family:'Cinzel Decorative',serif;font-size:1.35rem;color:var(--gold);margin-bottom:9px;}
+.mnum{font-family:'Cinzel Decorative',serif;font-size:2rem;color:var(--gl);margin-bottom:16px;}
+.mmsg{font-size:.82rem;color:var(--mt);line-height:1.7;margin-bottom:20px;}
+.mcls{background:linear-gradient(135deg,var(--gold),var(--gd));border:none;color:var(--bk);padding:10px 30px;font-family:'Raleway',sans-serif;font-weight:700;font-size:.76rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);transition:all .3s;}
+.mcls:hover{transform:scale(1.05);}
+.lbox{position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:30000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .32s;}
+.lbox.open{opacity:1;pointer-events:all;}
+.lbimg{max-width:78vw;max-height:78vh;object-fit:contain;border:1px solid rgba(212,175,55,.28);}
+.lbcls{position:absolute;top:18px;right:22px;background:none;border:none;color:var(--wh);font-size:1.9rem;cursor:pointer;opacity:.65;transition:opacity .2s;}
+.lbcls:hover{opacity:1;}
+.lbinfo{position:absolute;bottom:24px;text-align:center;}
+.lbn{font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:3px;}
+.lbp{color:var(--gold);font-family:'Cinzel Decorative',serif;}
+/* WHATSAPP */
+.wa-float{position:fixed;bottom:88px;left:26px;z-index:5001;width:50px;height:50px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 18px rgba(37,211,102,.45);transition:all .3s;animation:wa-pulse 2.5s ease-in-out infinite;}
+.wa-float:hover{transform:scale(1.12);box-shadow:0 8px 28px rgba(37,211,102,.65);animation:none;}
+@keyframes wa-pulse{0%,100%{box-shadow:0 4px 18px rgba(37,211,102,.45);}50%{box-shadow:0 4px 28px rgba(37,211,102,.8),0 0 0 8px rgba(37,211,102,.1);}}
+.wa-float svg{width:26px;height:26px;fill:#fff;}
+.wa-tooltip{position:absolute;left:60px;background:#25D366;color:#fff;padding:6px 12px;border-radius:4px;font-size:.7rem;font-weight:700;letter-spacing:1px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .25s;}
+.wa-float:hover .wa-tooltip{opacity:1;}
+.wa-tooltip::before{content:'';position:absolute;left:-5px;top:50%;transform:translateY(-50%);border:5px solid transparent;border-right-color:#25D366;border-left:0;}
+/* WA order btn in checkout */
+.wa-order-btn{width:100%;padding:15px;background:linear-gradient(135deg,#25D366,#128C7E);border:none;color:#fff;font-family:'Raleway',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;clip-path:polygon(9px 0%,100% 0%,calc(100% - 9px) 100%,0% 100%);transition:all .3s;margin-top:8px;display:flex;align-items:center;justify-content:center;gap:8px;}
+.wa-order-btn:hover{box-shadow:0 8px 26px rgba(37,211,102,.45);transform:translateY(-2px);}
+.wa-order-btn svg{width:18px;height:18px;fill:#fff;flex-shrink:0;}
+.order-divider{display:flex;align-items:center;gap:10px;margin:10px 0;color:var(--mt);font-size:.68rem;letter-spacing:2px;text-transform:uppercase;}
+.order-divider::before,.order-divider::after{content:'';flex:1;height:1px;background:rgba(212,175,55,.15);}
+/* WA quick btn on menu card */
+.mc-wa{position:absolute;top:9px;right:9px;width:28px;height:28px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s;opacity:0;z-index:3;}
+.mc-wa svg{width:14px;height:14px;fill:#fff;}
+.mc:hover .mc-wa{opacity:1;}
+.mc-wa:hover{transform:scale(1.15);box-shadow:0 3px 10px rgba(37,211,102,.5);}
+/* WA modal */
+.wa-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:25000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s;}
+.wa-modal-overlay.open{opacity:1;pointer-events:all;}
+.wa-modal{background:var(--d2);border:1px solid rgba(37,211,102,.3);padding:36px 30px;max-width:500px;width:92%;clip-path:polygon(0 0,calc(100% - 18px) 0,100% 18px,100% 100%,18px 100%,0 calc(100% - 18px));transform:scale(.85);transition:transform .4s;}
+.wa-modal-overlay.open .wa-modal{transform:scale(1);}
+.wa-modal-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.wa-modal-icon{width:44px;height:44px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.wa-modal-icon svg{width:22px;height:22px;fill:#fff;}
+.wa-modal-title{font-family:'Cinzel Decorative',serif;font-size:1.2rem;color:#25D366;}
+.wa-modal-sub{font-size:.72rem;color:var(--mt);margin-top:2px;}
+.wa-order-preview{background:rgba(37,211,102,.05);border:1px solid rgba(37,211,102,.15);padding:16px;margin-bottom:18px;max-height:200px;overflow-y:auto;font-size:.78rem;line-height:1.9;color:var(--wh);}
+.wa-order-preview::-webkit-scrollbar{width:3px;}.wa-order-preview::-webkit-scrollbar-thumb{background:rgba(37,211,102,.3);}
+.wa-num-choice{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px;}
+.wa-num-btn{padding:12px;background:rgba(37,211,102,.08);border:1px solid rgba(37,211,102,.25);color:var(--wh);cursor:pointer;font-family:'Raleway',sans-serif;font-size:.8rem;font-weight:600;transition:all .3s;text-align:center;}
+.wa-num-btn:hover{background:rgba(37,211,102,.2);border-color:#25D366;}
+.wa-num-btn .wnum{display:block;font-family:'Cinzel Decorative',serif;font-size:1rem;color:#25D366;margin-bottom:3px;}
+.wa-num-btn .wlbl{font-size:.65rem;color:var(--mt);letter-spacing:1px;text-transform:uppercase;}
+.wa-cancel{background:none;border:1px solid rgba(255,255,255,.1);color:var(--mt);padding:9px 20px;font-family:'Raleway',sans-serif;font-size:.72rem;cursor:pointer;transition:all .3s;margin-top:4px;}
+.wa-cancel:hover{border-color:rgba(255,255,255,.3);color:var(--wh);}
+.wa-send-btn{width:100%;padding:14px;background:linear-gradient(135deg,#25D366,#128C7E);border:none;color:#fff;font-family:'Raleway',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;clip-path:polygon(9px 0%,100% 0%,calc(100% - 9px) 100%,0% 100%);transition:all .3s;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:6px;}
+.wa-send-btn:hover{box-shadow:0 6px 22px rgba(37,211,102,.45);transform:translateY(-2px);}
+.wa-send-btn svg{width:17px;height:17px;fill:#fff;}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
+.rv.vis{opacity:1;transform:translateY(0);}
+.rv1{transition-delay:.1s;}.rv2{transition-delay:.2s;}.rv3{transition-delay:.3s;}
+@media(max-width:1000px){.ag,.cgrid,.olay,.bwrap{grid-template-columns:1fr;}.hvis{display:none;}.sgrid{grid-template-columns:1fr 1fr;}.sgrid .scc:first-child{grid-column:span 2;height:240px;}.rcards{grid-template-columns:1fr 1fr;}.nm{display:none;}}
+@media(max-width:640px){.sgrid,.rcards,.revg{grid-template-columns:1fr;}.sgrid .scc:first-child{grid-column:1;}section{padding:58px 4%;}.mgrid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div id="C"></div><div id="CR"></div>
+
+<nav id="nav">
+  <div class="nl">NOORI <span>FOODS</span></div>
+  <ul class="nm">
+    <li><a href="#about">About</a></li><li><a href="#menu">Menu</a></li>
+    <li><a href="#specials">Specials</a></li><li><a href="#ramadan">Ramadan</a></li>
+    <li><a href="#order">Order</a></li><li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nob" onclick="goOrder()">🛒 Order Now</button>
+</nav>
+
+<section id="hero">
+  <div class="hbg"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=1600&q=80" alt="BBQ"><div class="hov"></div><div class="hglow"></div></div>
+  <div id="ptc"></div>
+  <div class="hcon">
+    <p class="htag">Rawalpindi's Finest Since 2010</p>
+    <h1 class="htl"><span class="t1">Welcome to</span><span class="t2">NOORI FOODS</span></h1>
+    <p class="hsub">Pakistani BBQ · Fast Food · Chinese · Sea Food</p>
+    <div class="hrat"><span class="stars">★★★★★</span><span class="rtxt">4.9/5 · 2,400+ Reviews · Rawalpindi's #1 BBQ</span></div>
+    <div class="hbtns">
+      <button class="bp" onclick="goOrder()">Order Online Now</button>
+      <button class="bs" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">View Full Menu</button>
+    </div>
+  </div>
+  <div class="hvis">
+    <div class="hvr1"><div class="hvdot d1"></div><div class="hvdot d2"></div></div>
+    <div class="hvr2"></div>
+    <div class="hvm"><img src="https://images.unsplash.com/photo-1567529692333-de9fd6772897?w=600&q=80" alt="BBQ Platter"></div>
+    <div class="hvm2 m1"><img src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=200&q=70" alt="Karahi"></div>
+    <div class="hvm2 m2"><img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=200&q=70" alt="Pulao"></div>
+    <div class="hvm2 m3"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=200&q=70" alt="Tikka"></div>
+  </div>
+  <div class="hscr"><div class="scrl"></div><span class="scrt">Scroll to Explore</span></div>
+</section>
+
+<div class="sstrip">
+  <div class="ssi"><span class="ssn">15+</span><span class="ssl">Years Serving</span></div>
+  <div class="ssi"><span class="ssn">200+</span><span class="ssl">Menu Items</span></div>
+  <div class="ssi"><span class="ssn">50K+</span><span class="ssl">Happy Customers</span></div>
+  <div class="ssi"><span class="ssn">2</span><span class="ssl">Branches</span></div>
+  <div class="ssi"><span class="ssn">4.9★</span><span class="ssl">Avg Rating</span></div>
+  <div class="ssi"><span class="ssn">14hr</span><span class="ssl">Daily Delivery</span></div>
+</div>
+<div class="gl"></div>
+
+<section id="about">
+  <div class="ag">
+    <div>
+      <p class="sl rv">About Noori Foods</p>
+      <h2 class="st rv rv1">The <span>Largest Variety</span><br>of BBQ in Town</h2>
+      <div class="sd rv rv2"></div>
+      <p class="ap rv rv2">Noori Foods is Rawalpindi's premier destination for authentic Pakistani cuisine, world-class BBQ, Fast Food, and Chinese specialties. Over 15 years we've become the gold standard for BBQ in the twin cities.</p>
+      <p class="ap rv rv3">From signature Party Platters to fresh Mughlai Handis, Karahi selections, and live Sea Food — every dish is crafted with traditional recipes, premium fresh ingredients, and cooked with passion.</p>
+      <p class="ap rv rv3">Two conveniently located branches in Rawalpindi with home delivery available from 11 AM to 1 AM daily.</p>
+      <div class="astat rv">
+        <div class="asc"><div class="asn">15+</div><div class="asl">Years of Excellence</div></div>
+        <div class="asc"><div class="asn">200+</div><div class="asl">Dishes Available</div></div>
+        <div class="asc"><div class="asn">2</div><div class="asl">Prime Locations</div></div>
+        <div class="asc"><div class="asn">1AM</div><div class="asl">Last Delivery</div></div>
+      </div>
+    </div>
+    <div class="aviz rv">
+      <div class="avi"><img src="https://images.unsplash.com/photo-1567529692333-de9fd6772897?w=500&q=80" alt="BBQ"><span class="avil">Signature BBQ</span></div>
+      <div class="avi"><img src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&q=80" alt="Karahi"><span class="avil">Karahi</span></div>
+      <div class="avi"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=80" alt="Tikka"><span class="avil">Tikka</span></div>
+    </div>
+  </div>
+</section>
+<div class="gl"></div>
+
+<section id="menu">
+  <p class="sl">Our Full Menu</p>
+  <h2 class="st">Explore <span>Every Flavor</span></h2>
+  <div class="sd"></div>
+  <div class="mtabs" id="mtabs">
+    <button class="mt active" data-cat="all">All Items</button>
+    <button class="mt" data-cat="bbq">🔥 BBQ</button>
+    <button class="mt" data-cat="karahi">🍲 Karahi</button>
+    <button class="mt" data-cat="pulao">🍚 Pulao</button>
+    <button class="mt" data-cat="handi">🫕 Mughlai Handi</button>
+    <button class="mt" data-cat="seafood">🦐 Sea Food</button>
+    <button class="mt" data-cat="chinese">🍜 Chinese</button>
+    <button class="mt" data-cat="pizza">🍕 Pizza</button>
+    <button class="mt" data-cat="burger">🍔 Burgers</button>
+    <button class="mt" data-cat="deals">⭐ Deals</button>
+    <button class="mt" data-cat="daal">🫘 Daal & More</button>
+  </div>
+  <div class="mgrid" id="mgrid"></div>
+</section>
+<div class="gl"></div>
+
+<section id="specials">
+  <p class="sl">Must Try</p>
+  <h2 class="st">Noori <span>Signature</span> Platters</h2>
+  <div class="sd"></div>
+  <div class="sgrid">
+    <div class="scc" onclick="addC('Party Platter (5-6 Person)',6800,'https://images.unsplash.com/photo-1567529692333-de9fd6772897?w=200&q=60')">
+      <img src="https://images.unsplash.com/photo-1567529692333-de9fd6772897?w=800&q=80" alt="Party Platter">
+      <div class="sci"><div class="scn">Party Platter (5-6 Person)</div><div class="scp">Rs. 6,800</div><div class="scax">+ Add to Order</div></div>
+      <div class="scst">Best Seller</div>
+    </div>
+    <div class="scc" onclick="addC('Family BBQ Platter',4500,'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=200&q=60')">
+      <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500&q=80" alt="Family BBQ">
+      <div class="sci"><div class="scn">Family BBQ Platter</div><div class="scp">Rs. 4,500</div><div class="scax">+ Add to Order</div></div>
+      <div class="scst" style="background:var(--gold);color:var(--bk);">Family</div>
+    </div>
+    <div class="scc" onclick="addC('Sub Kuch Deal',11500,'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=200&q=60')">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&q=80" alt="Sub Kuch Deal">
+      <div class="sci"><div class="scn">Sub Kuch Deal</div><div class="scp">Rs. 11,500</div><div class="scax">+ Add to Order</div></div>
+    </div>
+    <div class="scc" onclick="addC('Sea Food Platter',6500,'https://images.unsplash.com/photo-1559847844-5315695dadae?w=200&q=60')">
+      <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=500&q=80" alt="Sea Food Platter">
+      <div class="sci"><div class="scn">Sea Food Platter (5-6 Person)</div><div class="scp">Rs. 6,500</div><div class="scax">+ Add to Order</div></div>
+      <div class="scst" style="background:#1a6b3c;">Fresh</div>
+    </div>
+    <div class="scc" onclick="addC('Noori Special Platter',18000,'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=200&q=60')">
+      <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=500&q=80" alt="Noori Special">
+      <div class="sci"><div class="scn">Noori Special Platter</div><div class="scp">Rs. 18,000</div><div class="scax">+ Add to Order</div></div>
+      <div class="scst" style="background:#5b3fa6;">Signature</div>
+    </div>
+  </div>
+</section>
+<div class="gl"></div>
+
+<section id="ramadan">
+  <div class="rh">
+    <span class="mi">🌙</span>
+    <p class="sl" style="text-align:center;">Ramadan Mubarak</p>
+    <h2 class="st" style="text-align:center;">Iftar <span>Specials</span></h2>
+    <div class="sd" style="margin:0 auto 44px;"></div>
+  </div>
+  <div class="rcards">
+    <div class="rcard">
+      <div class="rcimg"><img src="https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?w=400&q=70" alt="Iftar"></div>
+      <div class="rcb"><div class="rct">🌙 Iftar Platter</div><div class="rcn">1 Person Serving</div>
+        <ul class="rlist"><li>Pakoras<span>3 pcs</span></li><li>Mini Samosas<span>2 pcs</span></li><li>Potato Cutlets<span>2 pcs</span></li><li>Finger Fish<span>1 pc</span></li><li>Dates<span>2 pcs</span></li><li>Fruit Chaat<span>1</span></li><li>Chana Chaat<span>1</span></li><li>Roh Afza/Lemon Water<span>1</span></li></ul>
+        <div class="rpr">670<span style="font-size:.85rem">/-</span></div><div class="rprl">Per Person</div>
+        <button class="radd" onclick="addC('Iftar Platter (1 Person)',670,'https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?w=200&q=60')">Add to Order</button>
+      </div>
+    </div>
+    <div class="rcard">
+      <div class="rcimg"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=70" alt="Iftar 2p"></div>
+      <div class="rcb"><div class="rct">🌙 Iftar Platter</div><div class="rcn">2 Person Serving</div>
+        <ul class="rlist"><li>Pakoras<span>4 pcs</span></li><li>Mini Samosas<span>3 pcs</span></li><li>Potato Cutlets<span>4 pcs</span></li><li>Finger Fish<span>2 pcs</span></li><li>Dates<span>4 pcs</span></li><li>Fruit Chaat<span>1</span></li><li>Chana Chaat<span>1</span></li><li>Roh Afza/Lemon Water<span>1</span></li></ul>
+        <div class="rpr">1350<span style="font-size:.85rem">/-</span></div><div class="rprl">For 2 Persons</div>
+        <button class="radd" onclick="addC('Iftar Platter (2 Person)',1350,'https://images.unsplash.com/photo-1601050690597-df0568f70950?w=200&q=60')">Add to Order</button>
+      </div>
+    </div>
+    <div class="rcard">
+      <div class="rcimg"><img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=400&q=70" alt="Iftar Box"></div>
+      <div class="rcb"><div class="rct">📦 Iftar Box — Deal 1</div><div class="rcn">Complete Meal Box</div>
+        <ul class="rlist"><li>Yakhni Pulao<span>1</span></li><li>Mini Chapal Kabab<span>1</span></li><li>Chicken Boti<span>2 pcs</span></li><li>Seekh Kabab (S)<span>1</span></li><li>Mini Samosas<span>2 pcs</span></li><li>Dates<span>2 pcs</span></li><li>Fruit Chaat<span>1</span></li></ul>
+        <div class="rpr">850<span style="font-size:.85rem">/-</span></div>
+        <button class="radd" onclick="addC('Iftar Box Deal 1',850,'https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=200&q=60')">Add to Order</button>
+      </div>
+    </div>
+  </div>
+  <div class="bwrap">
+    <div>
+      <p class="sl" style="margin-bottom:7px;">Starting from 10th Ramadan</p>
+      <h3 style="font-family:'Cinzel Decorative',serif;font-size:1.55rem;margin-bottom:5px;">Iftar Dinner Buffet</h3>
+      <span class="bprc">Rs. 1,799/-</span>
+      <p style="font-size:.8rem;color:var(--mt);line-height:1.7;margin-bottom:12px;">All-inclusive feast — Iftar starters, Karahi, Kabab, Pulao, Fried Rice, Chowmein, Salads, and Desserts. A complete Ramadan experience.</p>
+      <div class="btags">
+        <span class="btag">Dates & Drinks</span><span class="btag">Pakoras</span><span class="btag">Samosa</span><span class="btag">Fish n Chips</span>
+        <span class="btag">Chicken Karahi</span><span class="btag">Gola Kabab</span><span class="btag">Tikka Boti</span><span class="btag">Yakhni Pulao</span>
+        <span class="btag">Fried Rice</span><span class="btag">Chowmein</span><span class="btag">Gajar Halwa</span><span class="btag">Shahi Kheer</span>
+      </div>
+      <button class="radd" style="width:auto;padding:10px 28px;" onclick="addC('Iftar Dinner Buffet',1799,'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=200&q=60')">Book Buffet Seat</button>
+    </div>
+    <div class="bimg"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=80" alt="Buffet"></div>
+  </div>
+</section>
+<div class="gl"></div>
+
+<section id="order">
+  <p class="sl">Online Ordering</p>
+  <h2 class="st">Place Your <span>Order</span></h2>
+  <div class="sd"></div>
+  <div class="olay">
+    <div class="opan">
+      <div class="opt">🛒 Your Cart</div>
+      <div class="citems" id="citems"><div class="cempty"><span class="ceico">🍽️</span>Cart is empty.<br>Browse the menu above!</div></div>
+      <div class="osum" id="osum" style="display:none;">
+        <div class="osr"><span>Subtotal</span><span id="sA">Rs. 0</span></div>
+        <div class="osr"><span>Delivery Fee</span><span id="dA">Rs. 50</span></div>
+        <div class="osr tot"><span>Total</span><span class="tp" id="tA">Rs. 0</span></div>
+      </div>
+    </div>
+    <div class="cpan">
+      <div class="opt">📋 Checkout</div>
+      <div class="fg"><label class="fl">Order Type</label>
+        <div class="rg">
+          <div class="ro"><input type="radio" name="ot" id="del" value="delivery" checked onchange="updD()"><label class="rl" for="del">🛵 Delivery</label></div>
+          <div class="ro"><input type="radio" name="ot" id="pku" value="pickup" onchange="updD()"><label class="rl" for="pku">🏪 Pickup</label></div>
+        </div>
+      </div>
+      <div class="fg"><label class="fl">Full Name</label><input type="text" class="fi" id="cn" placeholder="Your name"></div>
+      <div class="fg"><label class="fl">Phone Number</label><input type="tel" class="fi" id="cp" placeholder="03XX-XXXXXXX"></div>
+      <div class="fg" id="adg"><label class="fl">Delivery Address</label><textarea class="fta" id="ca" placeholder="Street, Area, City..."></textarea></div>
+      <div class="fg"><label class="fl">Branch</label>
+        <select class="fsel" id="cb">
+          <option value="a">Adiala Road Branch — Rawalpindi</option>
+          <option value="s">Sadiqabad Branch — Rawalpindi</option>
+        </select>
+      </div>
+      <div class="fg"><label class="fl">Special Instructions</label><textarea class="fta" id="cnotes" placeholder="Extra spicy? No onions? Let us know..."></textarea></div>
+      <button class="pob" onclick="placeOrder()">Place Order →</button>
+      <div class="order-divider">or order via</div>
+      <button class="wa-order-btn" onclick="openWaModal()">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Order via WhatsApp
+      </button>
+      <p style="font-size:.63rem;color:var(--mt);text-align:center;margin-top:9px;">Delivery 11am–1am · UAN: 0330-0111122</p>
+    </div>
+  </div>
+</section>
+<div class="gl"></div>
+
+<section id="reviews">
+  <p class="sl">Customer Love</p>
+  <h2 class="st">What People <span>Say</span></h2>
+  <div class="sd"></div>
+  <div class="revg">
+    <div class="revc"><div class="revs">★★★★★</div><div class="revt">"Best BBQ in Rawalpindi, no doubt. The Party Platter is an absolute must — feeds 6 people and still leaves everyone wanting more!"</div><div class="reva"><div class="revav">A</div><div><div class="revn">Ahmed Raza</div><div class="revl">Adiala Road, Rawalpindi</div></div></div></div>
+    <div class="revc"><div class="revs">★★★★★</div><div class="revt">"The Chicken Makhni Karahi is out of this world. We order from Noori Foods every Friday night. Food always arrives hot and fresh!"</div><div class="reva"><div class="revav">S</div><div><div class="revn">Sara Khan</div><div class="revl">Sadiqabad, Rawalpindi</div></div></div></div>
+    <div class="revc"><div class="revs">★★★★★</div><div class="revt">"Tried the Sea Food Platter for the first time — absolutely fresh. Noori Foods continues to set the standard for Rawalpindi dining."</div><div class="reva"><div class="revav">U</div><div><div class="revn">Usman Malik</div><div class="revl">Bahria Town, Rawalpindi</div></div></div></div>
+    <div class="revc"><div class="revs">★★★★★</div><div class="revt">"Ordered the Ramadan Iftar Platter — absolutely worth every rupee! Everything was fresh, Roh Afza chilled perfectly. Will order daily!"</div><div class="reva"><div class="revav">F</div><div><div class="revn">Fatima Iqbal</div><div class="revl">PWD Society, Rawalpindi</div></div></div></div>
+    <div class="revc"><div class="revs">★★★★★</div><div class="revt">"The Turkish Kabab with Fries is incredible. Great variety — Pakistani and Western all in one place. My family's go-to restaurant!"</div><div class="reva"><div class="revav">H</div><div><div class="revn">Hassan Ali</div><div class="revl">Gulraiz, Rawalpindi</div></div></div></div>
+    <div class="revc"><div class="revs">★★★★★</div><div class="revt">"Catering for our wedding was flawless. 3 degs of chicken pulao, everything on time and delicious. Highly recommend for events!"</div><div class="reva"><div class="revav">Z</div><div><div class="revn">Zara Shahid</div><div class="revl">Chaklala, Rawalpindi</div></div></div></div>
+  </div>
+</section>
+<div class="gl"></div>
+
+<section id="contact">
+  <p class="sl">Find Us</p>
+  <h2 class="st">Our <span>Locations</span></h2>
+  <div class="sd"></div>
+  <div class="cgrid">
+    <div>
+      <div class="ccard"><div class="cico">📍</div><div><div class="cct">Adiala Road Branch</div><div class="cci">Opp. National Saving Center, Munawar Colony, Main Adiala Road, Rawalpindi<br><span style="color:var(--gold);">051-5180666 · 051-5180660 · 0333-6666809</span></div></div></div>
+      <div class="ccard"><div class="cico">📍</div><div><div class="cct">Sadiqabad Branch</div><div class="cci">Raja Ashraf Market, Chirah Morr, Sadiqabad, Rawalpindi<br><span style="color:var(--gold);">051-4573652 · 0334-0060004 · 0334-0010004</span></div></div></div>
+      <div class="ccard"><div class="cico">📞</div><div><div class="cct">UAN / Direct Line</div><div class="cci" style="font-size:1.25rem;font-family:'Cinzel Decorative',serif;color:var(--gold);">0330-0111122</div></div></div>
+      <div class="ccard"><div class="cico">🛵</div><div><div class="cct">Home Delivery</div><div class="cci">Available Daily<br><span style="color:var(--gold);">11:00 AM — 1:00 AM</span></div></div></div>
+    </div>
+    <div>
+      <div class="hrw">
+        <div class="hrt">Opening Hours</div>
+        <div class="hrr"><span>Every Day</span><span class="op">11:00 AM – 1:00 AM</span></div>
+        <div class="hrr"><span>Ramadan Iftar Buffet</span><span class="op">From 10th Ramadan</span></div>
+        <div class="hrr"><span>Catering Orders</span><span class="op">By Appointment</span></div>
+      </div>
+      <div class="ctgb">
+        <div class="ctgt">Catering & Special Daig Orders</div>
+        <p class="ctgp">Planning a wedding or gathering? Our special daig catering starts from Rs. 12,000. Call 0330-0111122 for bookings.</p>
+        <div class="ctgtags">
+          <span class="ctgtag">Chicken Pulao ×10 Deg — Rs.12K</span>
+          <span class="ctgtag">Biryani ×10 Deg — Rs.12K</span>
+          <span class="ctgtag">Chicken Biryani ×10 Chicken Deg — Rs.18K</span>
+          <span class="ctgtag">Beef Qorma ×10 Deg — Rs.23K</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="flog">NOORI FOODS</div>
+  <div class="fcp">© 2025 Noori Foods · Pakistani BBQ · Fast Food · Chinese · Rawalpindi<br>The Largest Variety of BBQ in Town · UAN: 0330-0111122</div>
+  <div class="fsoc"><div class="sb">f</div><div class="sb">in</div><div class="sb">W</div></div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<div class="wa-float" onclick="openWaModal()" title="Order on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <div class="wa-tooltip">Order on WhatsApp</div>
+</div>
+
+<div class="cf" onclick="goOrder()" title="Cart">🛒<div class="cfc" id="cfc">0</div></div>
+
+<!-- WHATSAPP MODAL -->
+<div class="wa-modal-overlay" id="wamodal">
+  <div class="wa-modal">
+    <div class="wa-modal-head">
+      <div class="wa-modal-icon">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </div>
+      <div>
+        <div class="wa-modal-title">WhatsApp Order</div>
+        <div class="wa-modal-sub">Your order will be sent directly to our team</div>
+      </div>
+    </div>
+    <div class="wa-order-preview" id="waPreview">Add items to your cart first.</div>
+    <p style="font-size:.7rem;color:var(--mt);margin-bottom:12px;letter-spacing:1px;">CHOOSE BRANCH TO SEND ORDER TO:</p>
+    <div class="wa-num-choice">
+      <div class="wa-num-btn" onclick="sendWa('923336666809','Adiala Road')">
+        <span class="wnum">0333-6666809</span>
+        <span class="wlbl">📍 Adiala Road Branch</span>
+      </div>
+      <div class="wa-num-btn" onclick="sendWa('923490090006','Sadiqabad')">
+        <span class="wnum">0349-0090006</span>
+        <span class="wlbl">📍 Sadiqabad Branch</span>
+      </div>
+    </div>
+    <p style="font-size:.68rem;color:var(--mt);margin-bottom:14px;text-align:center;">Or send to main UAN line:</p>
+    <div class="wa-num-btn" style="text-align:center;margin-bottom:14px;" onclick="sendWa('923300111122','Main Line')">
+      <span class="wnum">0330-0111122</span>
+      <span class="wlbl">📞 Main UAN Line</span>
+    </div>
+    <button class="wa-cancel" onclick="closeWa()">Cancel</button>
+  </div>
+</div>
+
+<div class="toast" id="toast">
+  <div class="tim"><img id="tim" src="" alt="item" onerror="this.style.display='none'"></div>
+  <div><div class="tmg" id="tmg">Added!</div><div class="tpr" id="tpr"></div></div>
+</div>
+
+<div class="movl" id="omodal">
+  <div class="modal"><span class="mico">🎉</span><div class="mtit">Order Confirmed!</div><div class="mnum" id="onum">#NF-0000</div><div class="mmsg" id="omsg"></div><button class="mcls" onclick="closeM()">Got it!</button></div>
+</div>
+
+<div class="lbox" id="lbox" onclick="closeLb()">
+  <button class="lbcls" onclick="closeLb()">✕</button>
+  <img class="lbimg" id="lbimg" src="" alt="">
+  <div class="lbinfo"><div class="lbn" id="lbn"></div><div class="lbp" id="lbp"></div></div>
+</div>
+
+<script>
+// CURSOR
+const C=document.getElementById('C'),CR=document.getElementById('CR');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;C.style.left=mx+'px';C.style.top=my+'px';});
+(function L(){rx+=(mx-rx)*.13;ry+=(my-ry)*.13;CR.style.left=rx+'px';CR.style.top=ry+'px';requestAnimationFrame(L);})();
+// NAV
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sc',scrollY>65));
+// PARTICLES
+const ptc=document.getElementById('ptc');
+for(let i=0;i<22;i++){const p=document.createElement('div');p.className='pt';p.style.cssText=`left:${Math.random()*100}%;animation-duration:${6+Math.random()*10}s;animation-delay:${Math.random()*10}s;width:${1+Math.random()*2}px;height:${1+Math.random()*2}px;`;ptc.appendChild(p);}
+// REVEAL
+document.querySelectorAll('.rv').forEach(r=>new IntersectionObserver(([e])=>{if(e.isIntersecting)r.classList.add('vis');},{threshold:.08}).observe(r));
+
+// MENU DATA
+const ITEMS=[
+  {id:1,name:"Seekh Kabab — Chicken (6 pcs)",cat:"bbq",price:1800,img:"https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&q=65",desc:"Juicy minced chicken seekh kabab, charcoal grilled.",badge:"popular",stars:4.9,rc:312},
+  {id:2,name:"Seekh Kabab — Beef (6 pcs)",cat:"bbq",price:1800,img:"https://images.unsplash.com/photo-1567529692333-de9fd6772897?w=400&q=65",desc:"Classic beef seekh kabab with aromatic spices.",badge:"popular",stars:4.8,rc:280},
+  {id:3,name:"Reshmi Kabab (6 pcs)",cat:"bbq",price:1450,img:"https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=65",desc:"Silky smooth kabab with cream, cashew & saffron.",badge:"",stars:4.8,rc:190},
+  {id:4,name:"Chapli Kabab — Beef (L)",cat:"bbq",price:380,img:"https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&q=65",desc:"Classic Peshawari-style beef chapli kabab.",badge:"spicy",stars:4.9,rc:420},
+  {id:5,name:"Turkish Kabab with Fries",cat:"bbq",price:1390,img:"https://images.unsplash.com/photo-1529042410759-befb1204b468?w=400&q=65",desc:"Turkish-style kabab with crispy golden fries.",badge:"new",stars:4.7,rc:88},
+  {id:6,name:"Chicken Tikka (4 pcs)",cat:"bbq",price:340,img:"https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=65",desc:"Marinated chicken, tandoor-fired with smoky char.",badge:"popular",stars:4.9,rc:560},
+  {id:7,name:"Chicken Boti (4 pcs)",cat:"bbq",price:340,img:"https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=65",desc:"Tender boneless chicken boti, char-grilled.",badge:"",stars:4.8,rc:340},
+  {id:8,name:"Malai Tikka (4 pcs)",cat:"bbq",price:490,img:"https://images.unsplash.com/photo-1567529692333-de9fd6772897?w=400&q=65",desc:"Creamy malai-marinated tikka, rich and tender.",badge:"",stars:4.8,rc:210},
+  {id:9,name:"Beef Tikka (12 seeks)",cat:"bbq",price:1920,img:"https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&q=65",desc:"Spiced beef tikka skewers, charcoal grilled.",badge:"",stars:4.7,rc:180},
+  {id:10,name:"Behari Tikka (4 pcs)",cat:"bbq",price:490,img:"https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&q=65",desc:"Traditional Behari-style spiced tikka.",badge:"special",stars:4.8,rc:145},
+  {id:11,name:"Sikandari Tikka (5 pcs)",cat:"bbq",price:1050,img:"https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=65",desc:"Special Sikandari-style whole leg piece tikka.",badge:"special",stars:4.9,rc:230},
+  {id:12,name:"Chicken Cheese Gola Kabab (8 pcs)",cat:"bbq",price:790,img:"https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&q=65",desc:"Cheese-stuffed gola kabab — indulgent and crispy.",badge:"new",stars:4.8,rc:165},
+  {id:13,name:"Chapli Kabab Platter",cat:"bbq",price:1850,img:"https://images.unsplash.com/photo-1567529692333-de9fd6772897?w=400&q=65",desc:"4 chapli kabab, 2 roghni naan, mint sauce, drink.",badge:"popular",stars:4.9,rc:290},
+  {id:14,name:"Mutton Chops (1 KG)",cat:"bbq",price:4000,img:"https://images.unsplash.com/photo-1529042410759-befb1204b468?w=400&q=65",desc:"Premium mutton chops, charcoal grilled.",badge:"",stars:4.9,rc:180},
+  {id:15,name:"Beef Chops (1 KG)",cat:"bbq",price:3000,img:"https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&q=65",desc:"Tender beef chops with house spice rub.",badge:"",stars:4.8,rc:150},
+  {id:16,name:"Batairy (5 pcs)",cat:"bbq",price:990,img:"https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&q=65",desc:"Whole quail marinated and grilled — a BBQ delicacy.",badge:"special",stars:4.8,rc:130},
+  {id:17,name:"Kabab Karahi — Half",cat:"bbq",price:1200,img:"https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&q=65",desc:"Seekh kabab cooked inside a spicy karahi gravy.",badge:"",stars:4.8,rc:115},
+  // KARAHI
+  {id:18,name:"Chicken Karahi — Half",cat:"karahi",price:1050,img:"https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&q=65",desc:"Classic chicken karahi — bold, spicy, aromatic.",badge:"popular",stars:4.9,rc:520},
+  {id:19,name:"Chicken Karahi — Full",cat:"karahi",price:1950,img:"https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&q=65",desc:"Full-size classic karahi, feeds 4–5 people.",badge:"popular",stars:4.9,rc:380},
+  {id:20,name:"Chicken Makhni Karahi — Half",cat:"karahi",price:1180,img:"https://images.unsplash.com/photo-1567529692333-de9fd6772897?w=400&q=65",desc:"Rich buttery makhni chicken — creamy tomato base.",badge:"",stars:4.8,rc:290},
+  {id:21,name:"Chicken White Karahi — Half",cat:"karahi",price:1250,img:"https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=65",desc:"White karahi with yogurt, cream and green chilies.",badge:"",stars:4.8,rc:200},
+  {id:22,name:"Desi Chicken Makhni Karahi",cat:"karahi",price:3900,img:"https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&q=65",desc:"Full desi chicken in slow-cooked makhni karahi.",badge:"special",stars:4.9,rc:175},
+  {id:23,name:"Mutton Karahi — Half",cat:"karahi",price:2050,img:"https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&q=65",desc:"Tender mutton in fiery aromatic karahi.",badge:"spicy",stars:4.9,rc:310},
+  {id:24,name:"Mutton Makhni Karahi — Half",cat:"karahi",price:2250,img:"https://images.unsplash.com/photo-1567529692333-de9fd6772897?w=400&q=65",desc:"Mutton in luxuriously rich makhni gravy.",badge:"",stars:4.8,rc:190},
+  {id:25,name:"Mutton Shinwari Karahi — Half",cat:"karahi",price:2050,img:"https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&q=65",desc:"Authentic Peshawari-style Shinwari karahi.",badge:"special",stars:4.9,rc:230},
+  {id:26,name:"Beef Karahi — Half",cat:"karahi",price:1400,img:"https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&q=65",desc:"Slow-cooked beef in spicy karahi — bold flavors.",badge:"spicy",stars:4.8,rc:200},
+  {id:27,name:"Chicken Tikka Karahi — Half",cat:"karahi",price:1500,img:"https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=65",desc:"Tikka pieces merged into a fiery karahi base.",badge:"",stars:4.8,rc:140},
+  // MUGHLAI HANDI
+  {id:28,name:"Chicken Handi — Half",cat:"handi",price:1280,img:"https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=65",desc:"Slow-cooked chicken in traditional clay handi.",badge:"popular",stars:4.9,rc:280},
+  {id:29,name:"Chicken Handi — Full",cat:"handi",price:2490,img:"https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=65",desc:"Full Mughlai-style chicken handi, serves 4.",badge:"",stars:4.8,rc:160},
+  {id:30,name:"Chicken White Handi — Half",cat:"handi",price:1350,img:"https://images.unsplash.com/photo-1567529692333-de9fd6772897?w=400&q=65",desc:"Creamy white handi with chicken — light and elegant.",badge:"",stars:4.8,rc:190},
+  {id:31,name:"Special Dhuwan Handi — Half",cat:"handi",price:1350,img:"https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&q=65",desc:"Coal-smoked dhuwan handi — absolutely unique.",badge:"special",stars:4.9,rc:210},
+  // PULAO
+  {id:32,name:"Chicken Pulao — Single",cat:"pulao",price:530,img:"https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=400&q=65",desc:"Aromatic yakhni pulao with chicken piece and raita.",badge:"popular",stars:4.8,rc:480},
+  {id:33,name:"Chicken Pulao — Special",cat:"pulao",price:690,img:"https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=400&q=65",desc:"Pulao with two chicken pieces + shami kabab.",badge:"popular",stars:4.9,rc:360},
+  {id:34,name:"Pulao with Mix Grill",cat:"pulao",price:990,img:"https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&q=65",desc:"Pulao loaded with full mixed grill on the side.",badge:"popular",stars:4.9,rc:260},
+  {id:35,name:"Tikka Kabab Pulao",cat:"pulao",price:930,img:"https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=65",desc:"Pulao with chicken boti, gola kabab and chicken kabab.",badge:"",stars:4.8,rc:200},
+  {id:36,name:"Pulao with Chapli Kabab",cat:"pulao",price:480,img:"https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=400&q=65",desc:"Yakhni pulao with a chapli kabab.",badge:"",stars:4.8,rc:190},
+  {id:37,name:"Chicken Roast + Rice & Fries",cat:"pulao",price:1340,img:"https://images.unsplash.com/photo-1567529692333-de9fd6772897?w=400&q=65",desc:"Full steam roast with fried rice and fries.",badge:"special",stars:4.9,rc:230},
+  {id:38,name:"Pulao with Seekh Turkish Kabab",cat:"pulao",price:900,img:"https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=400&q=65",desc:"Pulao with special Turkish-style seekh kabab.",badge:"",stars:4.8,rc:140},
+  {id:39,name:"Zarda",cat:"pulao",price:200,img:"https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=65",desc:"Sweet saffron rice dessert with nuts and raisins.",badge:"",stars:4.7,rc:100},
+  // SEAFOOD
+  {id:40,name:"Pangasius Fish Finger — Half",cat:"seafood",price:1500,img:"https://images.unsplash.com/photo-1559847844-5315695dadae?w=400&q=65",desc:"Crispy golden breaded fish fingers — half portion.",badge:"popular",stars:4.8,rc:230},
+  {id:41,name:"Raho Fish — Fry Half",cat:"seafood",price:900,img:"https://images.unsplash.com/photo-1559847844-5315695dadae?w=400&q=65",desc:"Fresh Raho fish deep fried to golden perfection.",badge:"",stars:4.8,rc:190},
+  {id:42,name:"Raho Fish — Grill Half",cat:"seafood",price:950,img:"https://images.unsplash.com/photo-1559847844-5315695dadae?w=400&q=65",desc:"Grilled Raho fish with herbs and lemon butter.",badge:"",stars:4.8,rc:170},
+  {id:43,name:"Bone Less Salmon — Half",cat:"seafood",price:1100,img:"https://images.unsplash.com/photo-1559847844-5315695dadae?w=400&q=65",desc:"Premium boneless salmon — grilled or fried.",badge:"special",stars:4.9,rc:145},
+  {id:44,name:"Mushka Fish — Half",cat:"seafood",price:1250,img:"https://images.unsplash.com/photo-1559847844-5315695dadae?w=400&q=65",desc:"Fresh Mushka fish — a local delicacy.",badge:"",stars:4.8,rc:120},
+  {id:45,name:"Dynamic Prawns (6 pcs)",cat:"seafood",price:900,img:"https://images.unsplash.com/photo-1559847844-5315695dadae?w=400&q=65",desc:"Juicy garlic butter prawns with dipping sauce.",badge:"",stars:4.8,rc:180},
+  {id:46,name:"Crispy Fried Prawns (5 pcs)",cat:"seafood",price:900,img:"https://images.unsplash.com/photo-1559847844-5315695dadae?w=400&q=65",desc:"Crispy battered prawns — golden brown perfection.",badge:"popular",stars:4.8,rc:200},
+  {id:47,name:"Fish Seekh Kabab Plate (4 pcs)",cat:"seafood",price:950,img:"https://images.unsplash.com/photo-1559847844-5315695dadae?w=400&q=65",desc:"Minced fish seekh kabab with raita and naan.",badge:"",stars:4.7,rc:100},
+  // CHINESE
+  {id:48,name:"Chicken Chowmein (2 Person)",cat:"chinese",price:850,img:"https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=65",desc:"Stir-fried noodles with chicken and vegetables.",badge:"popular",stars:4.8,rc:380},
+  {id:49,name:"Kung Pao Chicken",cat:"chinese",price:1150,img:"https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=65",desc:"Classic spicy Kung Pao with peanuts and peppers.",badge:"spicy",stars:4.8,rc:280},
+  {id:50,name:"Manchurian",cat:"chinese",price:1150,img:"https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=65",desc:"Crispy chicken in tangy soy-ginger Manchurian sauce.",badge:"popular",stars:4.8,rc:320},
+  {id:51,name:"Chilli Dry",cat:"chinese",price:1150,img:"https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=65",desc:"Stir-fried dry chilli chicken with bell peppers.",badge:"spicy",stars:4.7,rc:240},
+  {id:52,name:"Honey Wings (6 pcs)",cat:"chinese",price:590,img:"https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=65",desc:"Crispy wings glazed in sweet sticky honey sauce.",badge:"popular",stars:4.9,rc:340},
+  {id:53,name:"Egg Fried Rice",cat:"chinese",price:690,img:"https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=65",desc:"Classic wok-fried rice with eggs and vegetables.",badge:"",stars:4.7,rc:300},
+  {id:54,name:"Chicken Fried Rice",cat:"chinese",price:750,img:"https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=65",desc:"Fried rice with tender chicken and spring onions.",badge:"",stars:4.7,rc:260},
+  {id:55,name:"Hot & Sour Soup — Single",cat:"chinese",price:350,img:"https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=65",desc:"Tangy hot and sour Chinese soup.",badge:"",stars:4.8,rc:200},
+  {id:56,name:"Fish & Chips",cat:"chinese",price:1490,img:"https://images.unsplash.com/photo-1559847844-5315695dadae?w=400&q=65",desc:"Crispy battered fish with golden chips.",badge:"",stars:4.7,rc:150},
+  // PIZZA
+  {id:57,name:"Chicken Tikka Pizza (6\")",cat:"pizza",price:550,img:"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=65",desc:"Classic Chicken Tikka pizza on fresh-baked base.",badge:"",stars:4.7,rc:220},
+  {id:58,name:"Pepperoni Pizza (9\")",cat:"pizza",price:1150,img:"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=65",desc:"Loaded pepperoni with stretched mozzarella.",badge:"popular",stars:4.8,rc:290},
+  {id:59,name:"Noori Special Pizza (9\")",cat:"pizza",price:2090,img:"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=65",desc:"Our signature pizza with secret toppings — must try!",badge:"special",stars:4.9,rc:310},
+  {id:60,name:"Crown Crust Pizza (9\")",cat:"pizza",price:2090,img:"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=65",desc:"Cheese-stuffed crown crust with premium toppings.",badge:"new",stars:4.8,rc:140},
+  {id:61,name:"Cheese Lover Pizza (16\")",cat:"pizza",price:2450,img:"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=65",desc:"Four-cheese overloaded pizza — pure cheese heaven.",badge:"popular",stars:4.8,rc:260},
+  {id:62,name:"Kabab Stuffed Pizza (9\")",cat:"pizza",price:2090,img:"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=65",desc:"Seekh kabab stuffed into the crust — fusion!",badge:"special",stars:4.9,rc:195},
+  {id:63,name:"Fajita Pizza (12\")",cat:"pizza",price:1650,img:"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=65",desc:"Mexican-style fajita chicken with jalapeños.",badge:"",stars:4.7,rc:180},
+  // BURGER
+  {id:64,name:"Zinger Burger",cat:"burger",price:450,img:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=65",desc:"Crispy zinger chicken fillet with special Noori sauce.",badge:"popular",stars:4.8,rc:420},
+  {id:65,name:"Tower Burger",cat:"burger",price:680,img:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=65",desc:"Double-stacked tower burger with all the fixings.",badge:"",stars:4.7,rc:180},
+  {id:66,name:"Petty Burger",cat:"burger",price:370,img:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=65",desc:"Classic beef patty burger — simple and satisfying.",badge:"",stars:4.6,rc:140},
+  {id:67,name:"Crispy Chicken (3 pcs)",cat:"burger",price:700,img:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=65",desc:"3 pieces of golden crispy fried chicken.",badge:"popular",stars:4.8,rc:290},
+  {id:68,name:"Hot Wings (4 pcs)",cat:"burger",price:410,img:"https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=65",desc:"Spicy oven-baked wings in hot sauce.",badge:"spicy",stars:4.8,rc:240},
+  {id:69,name:"Loaded Fries",cat:"burger",price:650,img:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=65",desc:"Fries topped with cheese, jalapeños, sour cream.",badge:"new",stars:4.8,rc:180},
+  {id:70,name:"Fries Basket (Regular)",cat:"burger",price:250,img:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=65",desc:"Crispy golden fries with house seasoning.",badge:"",stars:4.7,rc:310},
+  // DEALS
+  {id:71,name:"Zinger Deal (Burger+Fries+Drink)",cat:"deals",price:650,img:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=65",desc:"Complete zinger meal — burger, fries, 500ml drink.",badge:"popular",stars:4.8,rc:520},
+  {id:72,name:"2 Chicken Pulao + Zarda FREE",cat:"deals",price:1090,img:"https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=400&q=65",desc:"Two pulao plates with complimentary zarda dessert.",badge:"popular",stars:4.9,rc:380},
+  {id:73,name:"3 Chicken Pulao + Sada Pulao FREE",cat:"deals",price:1590,img:"https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=400&q=65",desc:"Three pulao plates with a free sada pulao.",badge:"",stars:4.8,rc:220},
+  {id:74,name:"Chinese Deal 1 (2 Person)",cat:"deals",price:1090,img:"https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=65",desc:"Egg Fried Rice, Manchurian, Wings 2pcs, Margarita.",badge:"popular",stars:4.8,rc:300},
+  {id:75,name:"Chinese Deal 2 (2 Person)",cat:"deals",price:1250,img:"https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=65",desc:"Egg Rice, Kung Pao, Fish Finger 2pcs, Margarita.",badge:"",stars:4.7,rc:190},
+  {id:76,name:"Pizza Deal — 1 Medium + 2 Zinger",cat:"deals",price:1950,img:"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=65",desc:"1 Medium pizza, 2 zinger burgers with drinks.",badge:"popular",stars:4.8,rc:260},
+  {id:77,name:"Sub Kuch Deal (6-8 Person)",cat:"deals",price:11500,img:"https://images.unsplash.com/photo-1567529692333-de9fd6772897?w=400&q=65",desc:"Peshawari Platter + Makhni Karahi + Mughlai Handi + 2 Pulao + Large Pizza + 2 Zinger + 4 Roghni Naan + Drink.",badge:"special",stars:4.9,rc:180},
+  {id:78,name:"Economy BBQ Platter",cat:"deals",price:1750,img:"https://images.unsplash.com/photo-1567529692333-de9fd6772897?w=400&q=65",desc:"Chicken kabab 3pcs, Malai Boti 4pcs, Chicken Tikka 1pc.",badge:"",stars:4.7,rc:140},
+  // DAAL & MORE
+  {id:79,name:"Shahi Daal (2 Person)",cat:"daal",price:550,img:"https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=65",desc:"Slow-cooked Shahi Daal with generous butter tadka.",badge:"popular",stars:4.8,rc:260},
+  {id:80,name:"Dal Mash",cat:"daal",price:350,img:"https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=65",desc:"Traditional whole urad dal — homestyle classic.",badge:"",stars:4.7,rc:180},
+  {id:81,name:"Chicken Keema",cat:"daal",price:450,img:"https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=65",desc:"Spiced minced chicken — rich and thick.",badge:"",stars:4.7,rc:150},
+  {id:82,name:"Mix Sabzi Makhni (2 Person)",cat:"daal",price:550,img:"https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=65",desc:"Mixed vegetable medley in creamy makhni sauce.",badge:"",stars:4.7,rc:100},
+  {id:83,name:"Naan (Roghni / Plain)",cat:"daal",price:40,img:"https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&q=65",desc:"Fresh tandoor-baked naan — roghni or plain.",badge:"",stars:4.8,rc:800},
+  {id:84,name:"Mint Margarita",cat:"daal",price:150,img:"https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?w=400&q=65",desc:"Refreshing mint lemonade — best with any meal.",badge:"popular",stars:4.9,rc:450},
+  {id:85,name:"Shami Kabab (1 pc)",cat:"daal",price:65,img:"https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&q=65",desc:"Soft lentil and beef shami kabab.",badge:"",stars:4.7,rc:320},
+];
+
+// CART & STATE — declared first so all functions can access them
+let cart=[],delMode='delivery';
+
+// WA SVG icon string — declared before renderMenu uses it
+const WA_SVG=`<svg viewBox="0 0 24 24" fill="#fff" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>`;
+
+function renderMenu(cat){
+  const g=document.getElementById('mgrid');
+  const f=cat==='all'?ITEMS:ITEMS.filter(i=>i.cat===cat);
+  g.innerHTML=f.map(item=>{
+    const sl='★'.repeat(Math.floor(item.stars))+(item.stars%1>=0.5?'½':'');
+    const bl=item.badge==='popular'?'🔥 Popular':item.badge==='spicy'?'🌶️ Spicy':item.badge==='new'?'✨ New':item.badge==='special'?'⭐ Special':'';
+    return `<div class="mc">
+      <div class="mci" onclick="openLb('${item.img}','${item.name.replace(/'/g,"\\'")}',${item.price})">
+        <img src="${item.img}" alt="${item.name}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1567529692333-de9fd6772897?w=400&q=60'">
+        <div class="mcio"></div>
+        ${item.badge?`<div class="mcb ${item.badge}">${bl}</div>`:''}
+        <div class="mczoom">🔍</div>
+        <div class="mc-wa" onclick="event.stopPropagation();quickWa('${item.name.replace(/'/g,"\\'")}',${item.price})" title="Quick WhatsApp Order">${WA_SVG}</div>
+      </div>
+      <div class="mcbody">
+        <div class="mcrat"><span class="mcs">${sl}</span><span class="mcrc">${item.stars} (${item.rc})</span></div>
+        <div class="mcn">${item.name}</div>
+        <div class="mcd">${item.desc}</div>
+        <div class="mcf">
+          <div class="mcp">Rs. ${item.price.toLocaleString()}<small>/-</small></div>
+          <button class="adb" onclick="event.stopPropagation();addC('${item.name.replace(/'/g,"\\'")}',${item.price},'${item.img}')">+</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+renderMenu('all');
+document.getElementById('mtabs').addEventListener('click',e=>{
+  if(e.target.classList.contains('mt')){
+    document.querySelectorAll('.mt').forEach(t=>t.classList.remove('active'));
+    e.target.classList.add('active');renderMenu(e.target.dataset.cat);
+  }
+});
+function addC(name,price,img){
+  const ex=cart.find(i=>i.name===name);
+  if(ex){ex.qty++;}else{cart.push({name,price,img,qty:1});}
+  renderCart();showToast(name,price,img);updBadge();
+}
+function renderCart(){
+  const c=document.getElementById('citems'),s=document.getElementById('osum');
+  if(!cart.length){c.innerHTML='<div class="cempty"><span class="ceico">🍽️</span>Cart is empty.<br>Browse the menu above!</div>';s.style.display='none';return;}
+  s.style.display='block';
+  c.innerHTML=cart.map((it,i)=>`<div class="citem">
+    <div class="cii"><img src="${it.img}" alt="${it.name}" onerror="this.src='https://images.unsplash.com/photo-1567529692333-de9fd6772897?w=100&q=50'"></div>
+    <div class="cin"><div class="cin-n">${it.name.length>28?it.name.substring(0,28)+'...':it.name}</div><div class="cin-p">Rs. ${(it.price*it.qty).toLocaleString()}</div></div>
+    <div class="cqty"><button class="qb" onclick="chQ(${i},-1)">−</button><span class="qn">${it.qty}</span><button class="qb" onclick="chQ(${i},1)">+</button></div>
+    <button class="crm" onclick="rmI(${i})">✕</button>
+  </div>`).join('');
+  const sub=cart.reduce((a,i)=>a+i.price*i.qty,0);
+  const df=delMode==='delivery'?50:0;
+  document.getElementById('sA').textContent='Rs. '+sub.toLocaleString();
+  document.getElementById('dA').textContent=df?'Rs. '+df:'Free';
+  document.getElementById('tA').textContent='Rs. '+(sub+df).toLocaleString();
+}
+function chQ(i,d){cart[i].qty+=d;if(cart[i].qty<=0)cart.splice(i,1);renderCart();updBadge();}
+function rmI(i){cart.splice(i,1);renderCart();updBadge();}
+function updD(){delMode=document.querySelector('input[name="ot"]:checked').value;document.getElementById('adg').style.display=delMode==='delivery'?'block':'none';renderCart();}
+function updBadge(){const t=cart.reduce((a,i)=>a+i.qty,0);const b=document.getElementById('cfc');b.textContent=t;b.classList.toggle('v',t>0);}
+
+// TOAST
+let tt;
+function showToast(name,price,img){
+  const t=document.getElementById('toast');
+  document.getElementById('tim').src=img;
+  document.getElementById('tmg').textContent=name.length>28?name.substring(0,28)+'...':name;
+  document.getElementById('tpr').textContent='Rs. '+price.toLocaleString()+' added to cart';
+  t.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('show'),2600);
+}
+
+// LIGHTBOX
+function openLb(img,name,price){document.getElementById('lbimg').src=img;document.getElementById('lbn').textContent=name;document.getElementById('lbp').textContent='Rs. '+price.toLocaleString()+'/-';document.getElementById('lbox').classList.add('open');}
+function closeLb(){document.getElementById('lbox').classList.remove('open');}
+
+// WHATSAPP
+
+function buildWaText(name, phone, addr, branch, notes) {
+  const sub = cart.reduce((a, i) => a + i.price * i.qty, 0);
+  const df = delMode === 'delivery' ? 50 : 0;
+  let msg = '🍽️ *NOORI FOODS — NEW ORDER*\n';
+  msg += '━━━━━━━━━━━━━━━━━━━━\n';
+  msg += '📋 *Items Ordered:*\n';
+  cart.forEach(it => {
+    msg += `  • ${it.name}  ×${it.qty}  →  Rs. ${(it.price * it.qty).toLocaleString()}\n`;
+  });
+  msg += '━━━━━━━━━━━━━━━━━━━━\n';
+  msg += `💰 Subtotal: Rs. ${sub.toLocaleString()}\n`;
+  if (df) msg += `🛵 Delivery Fee: Rs. ${df}\n`;
+  msg += `✅ *TOTAL: Rs. ${(sub + df).toLocaleString()}*\n`;
+  msg += '━━━━━━━━━━━━━━━━━━━━\n';
+  msg += `👤 Name: ${name || 'Not provided'}\n`;
+  msg += `📞 Phone: ${phone || 'Not provided'}\n`;
+  msg += `🏪 Branch: ${branch}\n`;
+  msg += `🚗 Order Type: ${delMode === 'delivery' ? 'Home Delivery' : 'Self Pickup'}\n`;
+  if (delMode === 'delivery' && addr) msg += `📍 Address: ${addr}\n`;
+  if (notes) msg += `📝 Notes: ${notes}\n`;
+  msg += '━━━━━━━━━━━━━━━━━━━━\n';
+  msg += '_Order placed via NooriFoods website_';
+  return msg;
+}
+
+function buildPreview() {
+  if (!cart.length) return '<span style="color:var(--mt);">Your cart is empty — add items from the menu first!</span>';
+  const sub = cart.reduce((a, i) => a + i.price * i.qty, 0);
+  const df = delMode === 'delivery' ? 50 : 0;
+  let html = '';
+  cart.forEach(it => {
+    html += `<span style="color:#25D366;">•</span> ${it.name} <strong style="color:var(--gold);">×${it.qty}</strong> — Rs. ${(it.price * it.qty).toLocaleString()}<br>`;
+  });
+  html += `<br><strong style="color:#25D366;font-size:.9rem;">Total: Rs. ${(sub + df).toLocaleString()}</strong>`;
+  if (delMode === 'delivery') html += `<span style="color:var(--mt);font-size:.7rem;"> (incl. delivery)</span>`;
+  return html;
+}
+
+function openWaModal() {
+  if (!cart.length) {
+    alert('Please add items to your cart first before ordering on WhatsApp!');
+    return;
+  }
+  document.getElementById('waPreview').innerHTML = buildPreview();
+  document.getElementById('wamodal').classList.add('open');
+}
+
+function closeWa() {
+  document.getElementById('wamodal').classList.remove('open');
+}
+
+function sendWa(number, branch) {
+  if (!cart.length) {
+    closeWa();
+    alert('Your cart is empty! Please add items first.');
+    return;
+  }
+  // Read form fields (optional — user may not have filled them yet)
+  const name  = (document.getElementById('cn').value || '').trim();
+  const phone = (document.getElementById('cp').value || '').trim();
+  const addr  = (document.getElementById('ca').value || '').trim();
+  const notes = (document.getElementById('cnotes').value || '').trim();
+
+  const msg = buildWaText(name, phone, addr, branch, notes);
+  const waUrl = 'https://wa.me/' + number + '?text=' + encodeURIComponent(msg);
+
+  // Open WhatsApp in new tab
+  const win = window.open(waUrl, '_blank');
+  if (!win) {
+    // Popup blocked — fall back to same-tab redirect
+    window.location.href = waUrl;
+    return;
+  }
+
+  closeWa();
+
+  // Show success confirmation
+  const orderNum = '#NF-' + Math.floor(1000 + Math.random() * 9000);
+  document.getElementById('onum').textContent = orderNum;
+  document.getElementById('omsg').textContent =
+    'WhatsApp is opening with your complete order ' + orderNum +
+    ' for the ' + branch + ' Branch. Just tap Send in WhatsApp and our team will confirm shortly!';
+  document.getElementById('omodal').classList.add('open');
+
+  // Clear cart after sending
+  cart = [];
+  renderCart();
+  updBadge();
+  ['cn', 'cp', 'ca', 'cnotes'].forEach(id => { document.getElementById(id).value = ''; });
+}
+
+// Quick single-item WhatsApp order (from menu card hover button)
+function quickWa(name, price) {
+  const msg =
+    '🍽️ *NOORI FOODS — Quick Order*\n' +
+    '━━━━━━━━━━━━━━━━━━━━\n' +
+    '• ' + name + '  →  Rs. ' + price.toLocaleString() + '\n' +
+    '━━━━━━━━━━━━━━━━━━━━\n' +
+    'Hi! I would like to order the above item. Please confirm availability and share the delivery details.\n' +
+    '_Sent from NooriFoods website_';
+  const waUrl = 'https://wa.me/923300111122?text=' + encodeURIComponent(msg);
+  const win = window.open(waUrl, '_blank');
+  if (!win) window.location.href = waUrl;
+}
+
+// ORDER
+function placeOrder(){
+  if(!cart.length){alert('Please add items first!');return;}
+  const n=document.getElementById('cn').value.trim(),p=document.getElementById('cp').value.trim(),a=document.getElementById('ca').value.trim();
+  if(!n){alert('Please enter your name.');return;}
+  if(!p){alert('Please enter your phone number.');return;}
+  if(delMode==='delivery'&&!a){alert('Please enter your delivery address.');return;}
+  const num='#NF-'+Math.floor(1000+Math.random()*9000);
+  const br=document.getElementById('cb').value==='a'?'Adiala Road':'Sadiqabad';
+  const sub=cart.reduce((acc,i)=>acc+i.price*i.qty,0);
+  document.getElementById('onum').textContent=num;
+  document.getElementById('omsg').textContent=`Thank you ${n}! Your order of Rs. ${sub.toLocaleString()} from ${br} Branch is confirmed. We'll call ${p} shortly. ${delMode==='delivery'?'Expected delivery: 30–45 mins.':'Ready for pickup in 20–25 mins.'}`;
+  document.getElementById('omodal').classList.add('open');
+  cart=[];renderCart();updBadge();
+  ['cn','cp','ca','cnotes'].forEach(id=>document.getElementById(id).value='');
+}
+function closeM(){document.getElementById('omodal').classList.remove('open');}
+function goOrder(){document.getElementById('order').scrollIntoView({behavior:'smooth'});}
+</script>
+</body>
+</html>
